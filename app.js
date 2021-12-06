@@ -8,7 +8,7 @@ const noOfNotes = document.querySelectorAll(".no-of-notes")
 const currency = [2000,500,200,100,50,20,10,5,1];
 
 checkButton.addEventListener("click" , function validate() {
-  console.clear();
+  clearMsg();
   let ba = Math.floor(billAmount.value);
   let cg = Math.floor(userPay.value);
 
@@ -17,12 +17,20 @@ checkButton.addEventListener("click" , function validate() {
        const amountChange = (cg - ba);
        calculateChange(amountChange); 
       } else {
+        
        showMessage("Want To Wash Plates?");
+       
      }
   }else {
     showMessage("Invalid Bill Amount");
     }
 });
+
+
+function clearMsg(){
+  message.style.display ="none";
+ 
+}
  
 function showMessage(msg){
     message.style.display = "block"
