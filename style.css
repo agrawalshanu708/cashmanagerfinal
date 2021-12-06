@@ -7,3 +7,6 @@
     flex-direction: column;
     width: 50vw;
 }
+body {
+    background-color: beige;
+}
